@@ -1,8 +1,8 @@
 # Ettepanekud täiendavate mittefunktsionaalsete nõuete kandidaatide kohta
 
-**Analüüs:** Kõik mittefunktsionaalsed nõuded failides `candidate.md`, `cfr.md` ja teistes MFN-dokumentides.
+**Analüüs:** Kõik mittefunktsionaalsed nõuded erinevate asutuste MFN-dokumentides ja uuendatud cfr.md dokumendis.
 
-**Põhimõte:** Täiendused põhinevad tarkvaraarenduse ja juhtimise parimate praktikate võrdlusel praeguse nõudekogumiga.
+**Põhimõte:** Täiendused põhinevad tarkvaraarenduse ja juhtimise parimate praktikate võrdlusel praeguse nõuete kogumiga.
 
 **Viidatud standardid ja praktikad (Wikipedia):**
 - [ISO/IEC 25010](https://en.wikipedia.org/wiki/ISO/IEC_9126) – tarkvara kvaliteedimudel (25010 asendab 9126)
