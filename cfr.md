@@ -1,26 +1,14 @@
 # Konsolideeritud mittefunktsionaalsed nõuded (kandidaat)
 
 See dokument ühendab nõuded järgmistest allikatest:
-- **cfr.md** – Cross-Functional Requirements (CFR), hetkel kehtivad nõuded
-- Ühised nõuded mis esinevad vähemalt kahes dokumendis erinevate asutuste (RIA, RMIT, RIK, TEHIK, KeMIT, HTM, SMIT, REMITK jt) MFN dokumentides.
-
-Iga nõude juures on viited allikatesse ning on lisaks on toodud võimalikud nõudetaseme kandidaadid viidatud dokumentidest.
+- **cfr.md** – hetkel kehtivad ristfunktsionaalsed nõuded (vt. https://koodivaramu.eesti.ee/e-gov/cfr )
+- Ühised nõuded mis esinevad vähemalt kahes erinevas MFN/RFN dokumendis.
 
 **Nõudetaseme nimetused:**
 - **required** – kohustuslik
 - **expected** – oodatav
 - **recommended** – soovituslik
 - **draft** – mustand
-
-**Nõudetasemete nimed ja viited dokumetidele, kus on kasutatud:**
-- **required** – kohustuslik (cfr)
-- **expected** – oodatav (cfr)
-- **recommended** – soovituslik (cfr)
-- **draft** – mustand, vajab täpsustamist (cfr)
-- **kohustus** – kohustuslik (cfr, sama mis required)
-- **kohustuslik** – kohustuslik (ria_mfn, rik_mfn, tehik_mfn, kemit_mfn, htm_mfn jt)
-- **KOHUSTUS** – kohustuslik (SMIT dokumentides)
-- **Soovituslik** - soovituslik (SMIT dokumentides)
 
 ---
 
@@ -511,5 +499,5 @@ Iga nõude juures on viited allikatesse ning on lisaks on toodud võimalikud nõ
 ## Kokkuvõte
 Nõuded pärinevad järgmistest allikatest:
 **Allikad:**
-- `cfr.md` – Cross-Functional Requirements (praegused nõuded)
-- `ria_mfn.md`,`rmit_mfn.md`, `rik_mfn.md`, `tehik_mfn.md`, `kemit_mfn.md`, `htm_mfn.md`, `jdm_data.md`, `remitk_mfn_st.md`, `smit-*` – asutuste mittefunktsionaalsed nõuded
+- `cfr.md` – Kehtiva ristfunktsionaalsed nõuded (vt. https://koodivaramu.eesti.ee/e-gov/cfr)
+- asutuste mittefunktsionaalsed nõuded
