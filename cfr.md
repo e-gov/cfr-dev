@@ -230,7 +230,7 @@ Võimalusel integreerida tehisaru põhised turvatestimise vahendid oma tavapära
 
 ### 3.9 Krüptograafia
 
-**Nõue:** Krüptoalgoritmite ja räsifunktsioonide kasutamisel tuleb järgida RIA krüptograafiliste algoritmide elutsükli uuringu soovitusi (<https://www.id.ee/artikkel/kruptograafiliste-algoritmide-elutsukli-uuringud-2/>). Valitud krüptoalgoritmide oodatav eluiga peab olema pikem kui rakenduse planeeritud eluiga.
+**Nõue:** Krüptoalgoritmite ja räsifunktsioonide kasutamisel tuleb järgida RIA krüptograafiliste algoritmide elutsükli uuringu soovitusi (<https://www.id.ee/artikkel/kruptograafiliste-algoritmide-elutsukli-uuringud-2/>). Rakendus peab oma elutsükli vältel toetama valitud krüptoalgoritmide asendamist ajakohastega.
 
 **Nõudetase:** required
 
@@ -338,7 +338,7 @@ Võimalusel integreerida tehisaru põhised turvatestimise vahendid oma tavapära
 
 ---
 
-### 4.5 Kahekohaline andmebaasikasutaja
+### 4.5 Eraldatud rollid andmebaasides
 
 **Nõue:** Andmebaasidel peab olem olema rakendatud vähemalt kaks erineva õigustetaset (baasi, skeemi haldamise õigused vs. rakenduse toimetamise õigused). Rakenduste andmebaasikontod peavad omama minimaalseid õiguseid.
 
@@ -688,7 +688,7 @@ Viited:
 
 ---
 
-### 11.1.1 Kohapealne puhver
+### 11.2 Kohapealne puhver
 
 **Nõue:** Rakenduse ehitamiseks vajalikud välised sõltuvused peavad olema peegeldatud kohalikesse repositooriumitesse.
 
@@ -698,7 +698,7 @@ Viited:
 
 ---
 
-### 11.2 Koodi selgus
+### 11.3 Koodi selgus
 
 **Nõue:** Lähtekood on kirjutatud selgusega, mis võimaldab uuel arendajal süsteemi edasi arendada. Lähtuda Clean Code printsiibist.
 
@@ -708,7 +708,7 @@ Viited:
 
 ---
 
-### 11.3 Taaskasutus
+### 11.4 Taaskasutus
 
 **Nõue:** Taaskasutatavalt disainitud kood on e-riigi koodivaramus (<https://koodivaramu.eesti.ee>), funktsioonid on e-riigi funktsioonivaramus (<https://funktsioonivaramu.eesti.ee/>)
 
@@ -718,17 +718,18 @@ Viited:
 
 ---
 
-### 11.4 Programmeerimiskeeled ja komponentide EOL
+### 11.5 Programmeerimiskeeled ja komponentide EOL
 
-**Nõue:** Arenduses ei kasutata programmeerimiskeeli väljaspool Top 25 TIOBE index'it (<https://www.tiobe.com/tiobe-index/>). Kõikide komponentide eluea lõpp (EOL) ei tohi olla lähemal kui 5 aastat.
+**Nõue:** Arenduses ei kasutata programmeerimiskeeli väljaspool Top 20 TIOBE index'it (<https://www.tiobe.com/tiobe-index/>).
+Kasutada komponente, millel on kehtiv tugi ja/või teadaolevalt aaktiivne opensource kommuun.
 
 **Nõudetase:** expected
 
-**Põhjendus:** [TIOBE Index](https://www.tiobe.com/tiobe-index/) — tööjõu kättesaadavus ja kogukonna tugi; EOL >5 aasta pärast tagab turvapaigad ja toetuse.
+**Põhjendus:** [TIOBE Index](https://www.tiobe.com/tiobe-index/) — tööjõu kättesaadavus ja kogukonna tugi
 
 ---
 
-### 11.5 Litsents
+### 11.6 Litsents
 
 **Nõue:** Tarkvara tuleb markeerida litsentsiga (LICENCE-fail või faili päis). Riik eelistav vaba litsentsi kasutamist (soovitus: MIT, alternatiiv EUPL).
 
@@ -738,7 +739,7 @@ Viited:
 
 ---
 
-### 11.6 Taasteplaanid
+### 11.7 Taasteplaanid
 
 **Nõue:** Teenuse rakendustele eksisteerivad ajakohased taasteplaanid, eelistatult automatiseeritult toimivad.
 
@@ -748,7 +749,7 @@ Viited:
 
 ---
 
-### 11.7 CI/CD ja automatiseerimine
+### 11.8 CI/CD ja automatiseerimine
 
 **Nõue:** Keskkondadesse tarkvara paigaldamine on automatiseeritud (Gitlab CI, Jenkins jms). Soovitatav on kasutada blue-green juurutusmustrit.
 
@@ -758,7 +759,7 @@ Viited:
 
 ---
 
-### 11.8 Semantiline versioneerimine
+### 11.9 Semantiline versioneerimine
 
 **Nõue:** Rakendus on versioneeritud semantilise versioneerimise põhimõtte järgi (A.B.C). Lisainfo: <https://semver.org/>
 
@@ -768,7 +769,7 @@ Viited:
 
 ---
 
-### 11.9 Vastupanuvõime
+### 11.10 Vastupanuvõime
 
 **Nõue:** Rakendus peab olema väliste süsteemide tõrgete suhtes vastupanuvõimeline (resilient). Välise süsteemi tõrge tohib mõjutada ainult otseselt sõltuvaid kasutuslugusid.
 
@@ -778,7 +779,7 @@ Viited:
 
 ---
 
-### 11.10 Kasutuslood
+### 11.11 Kasutuslood
 
 **Nõue:** Süsteemi funktsionaalne skoop on defineeritud ja dokumenteeritud selgesõnaliste kasutuslugudega.
 
