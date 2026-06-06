@@ -624,6 +624,8 @@ Viited:
 - <https://developer.mozilla.org/en-US/docs/Web/API/Web_components>
 - <https://www.tedi.ee/>
 
+---
+
 ### 10.7 REST API ja olekuta teenused
 
 **Nõue:** Tehnilised komponendid avaldavad REST API. Kasutajaliidese olekut hoitakse kliendi poolel; teenused on olekuta (stateless).
@@ -664,7 +666,7 @@ Viited:
 
 ---
 
-### 10.11 Konfiguratsioonifailid on kaitstud
+### 10.1 Konfiguratsioonifailid on kaitstud
 
 **Nõue:** Konfiguratsioonifailid peavad olema kaitstud. Muutmine on lubatud ainult administraatoritel.
 
