@@ -611,7 +611,20 @@ Vastused ei ületa mõistlikku suurust (näiteks 1000 kirjet korraga).
 
 ---
 
-### 10.6 REST API ja olekuta teenused
+### 10.6 Komponeeritav esitluskiht
+
+**Nõue:** Kasutajaliides ja teenuse funktsionaalsus peavad olema loogiliselt eristatud. Avalike teenuste puhul peab esitluskiht olema disainitud viisil, et kasutajaliidese funktsionaalsust oleks võimalik taaskasutada ja integreerida erinevates portaalides ning kanalites ilma äriloogika dubleerimiseta. Kasutajaliidese komponendid peavad olema võimalusel iseseisvalt juurutatavad ja taaskasutatavad. Avalikes teenustes tuleb arvestada kesksete portaalide (nt eesti.ee) nõuetega.
+
+**Nõudetase:** expected
+
+**Põhjendus:** Komponeeritav esitluskiht võimaldab sama teenuse kasutajaliidese funktsionaalsuste taaskasutamist erinevates portaalides ja kanalites, vähendab dubleerivat arendust ning toetab sõltumatut arendust ja juurutamist. Nõude realiseerimiseks võib kasutada mikrofrontendide (Micro Frontends), veebikomponentide (Web Components) või muid samaväärseid lähenemisi.
+Viited:
+
+- <https://martinfowler.com/articles/micro-frontends.html>
+- <https://developer.mozilla.org/en-US/docs/Web/API/Web_components>
+- <https://www.tedi.ee/>
+
+### 10.7 REST API ja olekuta teenused
 
 **Nõue:** Tehnilised komponendid avaldavad REST API. Kasutajaliidese olekut hoitakse kliendi poolel; teenused on olekuta (stateless).
 
@@ -621,7 +634,7 @@ Vastused ei ületa mõistlikku suurust (näiteks 1000 kirjet korraga).
 
 ---
 
-### 10.7 Pilvekõlbulikkus ja hajuskomponendid
+### 10.8 Pilvekõlbulikkus ja hajuskomponendid
 
 **Nõue:** Rakendus on pilvekõlbulik: skriptiga paigaldatav, koosneb mitmest sõltumatust instantsist, on automaatselt skaleeritav, andmed varundatud. Hajuskomponendid ei jaga sama andmebaasi, mälu ega failisüsteemi. Kõik andmed mida on vaja talletada pikemalt, peavad olema talletatud teenuse instantsidest väljaspool.
 
@@ -631,7 +644,7 @@ Vastused ei ületa mõistlikku suurust (näiteks 1000 kirjet korraga).
 
 ---
 
-### 10.8 Korrelatsiooni ID
+### 10.9 Korrelatsiooni ID
 
 **Nõue:** Tehnilised komponendid logivad või genereerivad korrelatsiooni ID. Korrelatsiooni ID saadetakse iga edasise päringuga kaasa (nt X-Correlation-ID).
 
@@ -641,7 +654,7 @@ Vastused ei ületa mõistlikku suurust (näiteks 1000 kirjet korraga).
 
 ---
 
-### 10.9 Rakendusserver eraldi andmebaasiserverist
+### 10.10 Rakendusserver eraldi andmebaasiserverist
 
 **Nõue:** Rakendusserver peab võimaldama töötamist andmebaasiserverist eraldi serveril/konteineris.
 
@@ -651,7 +664,7 @@ Vastused ei ületa mõistlikku suurust (näiteks 1000 kirjet korraga).
 
 ---
 
-### 10.10 Konfiguratsioonifailid on kaitstud
+### 10.11 Konfiguratsioonifailid on kaitstud
 
 **Nõue:** Konfiguratsioonifailid peavad olema kaitstud. Muutmine on lubatud ainult administraatoritel.
 
@@ -887,6 +900,48 @@ Andmekirjelduste loomisel ja nende teabeväravasse edastamiseks saab kasutada RI
 **Nõudetase:** expected
 
 **Põhjendus:** Masinloetav operatsioonijuhend (Agent.MD / README) toetab automatiseeritud juurutust, CI/CD agente ja tehisaru abistatud hooldust; OpenAPI ja health check viited.
+
+---
+
+### 14.4 Arhitektuuriotsuste dokumenteerimine (ADR)
+
+**Nõue:** Olulised arhitektuurilised, tehnilised ja integratsioonialased otsused tuleb dokumenteerida Architecture Decision Record (ADR) vormis. ADR-id peavad olema hallatud Git-põhises versioonihalduses koos lähtekoodiga. ADR peab minimaalselt kirjeldama:
+
+- otsuse konteksti;
+- kaalutud alternatiive;
+- tehtud otsust;
+- otsuse põhjendust;
+- mõju süsteemile.
+
+**Nõudetase:** expected
+
+**Põhjendus:**  ADR-id säilitavad teadmise, miks konkreetne tehniline või arhitektuuriline lahendus valiti. See vähendab teadmuse kadumist, toetab süsteemi edasiarendamist ning võimaldab arhitektuuriliste otsuste jälgitavust kogu süsteemi elutsükli jooksul.
+Viited:
+
+- Michael Nygard, Documenting Architecture Decisions (<https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions>)
+- ADR GitHub organisatsioon (<https://adr.github.io/>)
+
+---
+
+### 14.5 Dokumentatsioon kui lähtekood
+
+**Nõue:** Süsteemi nõuded, kasutuslood, arhitektuurikirjeldused, arhitektuuriotsused (ADR), liidestuste kirjeldused ja muu tehniline dokumentatsioon peavad olema hallatud Git-põhises versioonihalduses koos lähtekoodiga. Dokumentatsiooni autoriteetne allikas peab olema avatud, tekstipõhine, versioonihallatav ja masintöödeldav.
+Vormingute näited:
+
+- dokumentatsioon, nõuded ja kasutuslood: Markdown (MD);
+- arhitektuuri-, protsessi-, integratsiooni- ja süsteemiskeemid: tekstipõhised skeemikirjeldusformaadid (näiteks Mermaid, PlantUML, Structurizr DSL või muu samaväärne formaat);
+- API kirjeldused: OpenAPI;
+- struktureeritud konfiguratsiooni- ja andmekirjeldused: JSON või YAML.
+
+Diagrammide autoriteetseks lähtevorminguks loetakse tekstipõhine skeemikirjeldus. Diagrammide säilitamine üksnes pildi- või binaarvormingus ei ole lubatud.
+
+**Nõudetase:** expected
+
+**Põhjendus:**  Documentation as Code käsitleb dokumentatsiooni samadel põhimõtetel nagu lähtekoodi: versioonihaldus, muudatuste ülevaatus, automatiseeritud valideerimine ja koostöö. See parandab dokumentatsiooni ajakohasust, jälgitavust ja taaskasutatavust.
+
+Viited:
+
+- <https://www.writethedocs.org/guide/docs-as-code/>
 
 ---
 
