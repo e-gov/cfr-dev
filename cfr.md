@@ -96,7 +96,8 @@ Karbitoodete erisused on lubatud.
 
 ### 2.6 Kasutajaliidese masinasõbralikkus
 
-**Nõue:** Avalike teenuste puhul tagada nende kättesaadavus ka masinasõbralikus formaadis (näiteks MD) ja/või MCP protokolli kasutades.
+**Nõue:** Avalike teenuste puhul tagada nende kättesaadavus ka masinasõbralikul viisil.
+Võimalikud variandid: MarkDown formaati genereeritud tekstilsied andmestikud, REST/MCP protokollil andmevahetus, aga ka WebMCP standardile vastava vahekihi realiseerimine (vt. <https://webmachinelearning.github.io/webmcp/>)
 
 **Nõudetase:** expected
 
